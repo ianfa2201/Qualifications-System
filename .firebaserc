@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proyecto1-43feb"
+  },
+  "targets": {
+    "proyecto1-43feb": {
+      "hosting": {
+        "Proyecto1": [
+          "proyecto1-43feb"
+        ]
+      }
+    }
+  }
+}
