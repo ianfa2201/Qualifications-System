@@ -4,7 +4,7 @@
     <div class="col col-lg-6 offset-lg-3">
       <div class="card text-center">
         <div class="card-body">
-          <h3>Agregar empleado</h3>
+          <h3>{{titulo}}</h3>
           <span style="color: black;" *ngIf="enviado && createCosa.invalid "> Todos los campos son requeridos. </span>
           <form action="" [formGroup]="createCosa" (ngSubmit)="agregarCosa()">
             <div class="row">

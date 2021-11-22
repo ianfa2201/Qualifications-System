@@ -19,17 +19,26 @@ import { ModificaUsuarioComponent } from './modules/usuarios/modifica-usuario/mo
 import { ListaCosasComponent } from './components/lista-cosas/lista-cosas.component';
 import { NuevaCosaComponent } from './components/nueva-cosa/nueva-cosa.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DocenteComponent } from './components/docente/docente.component';
+import { EstudianteComponent } from './components/estudiante/estudiante.component';
+import { MateriasComponent } from './components/materias/materias.component';
+import { HomepageEstudianteComponent } from './homepage-estudiante/homepage-estudiante.component';
+import { DocentesComponent } from './components/lista-cosas/docentes/docentes.component';
+import { EstudiantesComponent } from './components/lista-cosas/estudiantes/estudiantes.component';
 
 //import { AngularFirestore } from '@angular/fire/firestore';
 //import { AngularFireAuthModule } from "@angular/fire/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCe9uxwHS1amMDL8Qsluw69fePdCFsdSKU",
-  authDomain: "proyecto1-43feb.firebaseapp.com",
-  projectId: "proyecto1-43feb",
-  storageBucket: "proyecto1-43feb.appspot.com",
-  messagingSenderId: "978620803644",
-  appId: "1:978620803644:web:3790230d817eeec6d3b139"
+  apiKey: "AIzaSyBSjqQJSRHGyDAc1D1yAW3V0Q5WhhCAC2E",
+  authDomain: "holamundo-c5321.firebaseapp.com",
+  projectId: "holamundo-c5321",
+  storageBucket: "holamundo-c5321.appspot.com",
+  messagingSenderId: "4961436979",
+  appId: "1:4961436979:web:d4a937a126e8e6f7ecaa46"
 };
 
 @NgModule({
@@ -43,7 +52,13 @@ const firebaseConfig = {
     ModificaUsuarioComponent,
     ListaCosasComponent,
     NuevaCosaComponent,
-    NavbarComponent
+    NavbarComponent,
+    DocenteComponent,
+    EstudianteComponent,
+    MateriasComponent,
+    HomepageEstudianteComponent,
+    DocentesComponent,
+    EstudiantesComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +66,10 @@ const firebaseConfig = {
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EditorModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
 
   ],
   providers: [AuthService],
