@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+
 
 <div class="container mt-4">
 <div class="card">
@@ -20,7 +20,7 @@
           <td>{{item.nombre}}</td>
           <td>{{item.cantidad}}</td>
           <td>
-            <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;" [routerLink]="['/edita-cosa/',item.id]"></li>
+            <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;"></li>
          <li class="fas fa-trash-alt fa-lg text-danger" (click)="eliminarCosa(item.id)"></li>
           </td>
         </tr>

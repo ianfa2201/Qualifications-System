@@ -10,7 +10,7 @@ export class CalificacionesService {
 
    }
 
-   agregarCalificacion(nota: any){
-      this.firestore.collection.collectio 
-   }
+  /* agregarCalificacion(nota: any){
+      this.firestore.collection.collectio
+   }*/
 }

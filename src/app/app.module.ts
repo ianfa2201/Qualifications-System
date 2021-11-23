@@ -24,10 +24,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DocenteComponent } from './components/docente/docente.component';
 import { EstudianteComponent } from './components/estudiante/estudiante.component';
-import { MateriasComponent } from './components/materias/materias.component';
 import { HomepageEstudianteComponent } from './homepage-estudiante/homepage-estudiante.component';
 import { DocentesComponent } from './components/lista-cosas/docentes/docentes.component';
 import { EstudiantesComponent } from './components/lista-cosas/estudiantes/estudiantes.component';
+import { NewDocenteComponent } from './add/new-docente/new-docente.component';
+import { NewEstudianteComponent } from './add/new-estudiante/new-estudiante.component';
+import { NewMateriaComponent } from './add/new-materia/new-materia.component';
+import { MateriaComponent } from './components/materia/materia.component';
+import { MateriasComponent } from './components/lista-cosas/materias/materias.component';
 
 //import { AngularFirestore } from '@angular/fire/firestore';
 //import { AngularFireAuthModule } from "@angular/fire/auth";
@@ -58,7 +62,11 @@ const firebaseConfig = {
     MateriasComponent,
     HomepageEstudianteComponent,
     DocentesComponent,
-    EstudiantesComponent
+    EstudiantesComponent,
+    NewDocenteComponent,
+    NewEstudianteComponent,
+    NewMateriaComponent,
+    MateriaComponent
   ],
   imports: [
     BrowserModule,
