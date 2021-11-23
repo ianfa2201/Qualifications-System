@@ -14,18 +14,18 @@ export class DocenteService {
   }
 
   getDocentes(): Observable<any>{
-    return this.firestore.collection('cosas').snapshotChanges();
+    return this.firestore.collection('Docente').snapshotChanges();
   }
 
   eliminarDocente(id: string): Promise<any>{
-    return this.firestore.collection('cosas').doc(id).delete();
+    return this.firestore.collection('Docente').doc(id).delete();
   }
 
   getDocente(id:string) : Observable<any>{
-    return this.firestore.collection('cosas').doc(id).snapshotChanges();
+    return this.firestore.collection('Docente').doc(id).snapshotChanges();
   }
 
   editarDocente(id: string, data:any): Promise<any>{
-    return this.firestore.collection('cosas').doc(id).update(data);
+    return this.firestore.collection('Docente').doc(id).update(data);
   }
 }

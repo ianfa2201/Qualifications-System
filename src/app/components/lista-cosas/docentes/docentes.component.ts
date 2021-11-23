@@ -19,9 +19,10 @@ export class DocentesComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.getDocentes();
   }
 
-  getCosas() {
+  getDocentes() {
 
     this.docenteService.getDocentes().subscribe(
       data => {
@@ -38,6 +39,8 @@ export class DocentesComponent implements OnInit {
       }
     );
   }
+
+
 
   eliminarDocente(id: string) {
     this.docenteService.eliminarDocente(id).then(() => {

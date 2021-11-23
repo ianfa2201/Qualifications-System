@@ -19,23 +19,22 @@
   <div class="card">
     <div class="card-body">
       <span class="h3">
-        Cosas
+      Estudiantes
       </span>
-      <button class="btn btn-dark" routerLink="/nueva-cosa">Nuevo</button>
+      <button class="btn btn-dark" routerLink="/nuevo-estudiante">Nuevo</button>
       <table class="table mt-5 table-striped">
         <thead>
           <tr>
             <th scope="col">Código</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Acciones</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of docentes">
+          <tr *ngFor="let item of estudiantes">
             <td>{{item.codigo}}</td>
             <td>{{item.nombre}}</td>
             <td>
-              <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;"></li>
+              <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;" [routerLink]="['/edita-estudiante']"></li>
            <li class="fas fa-trash-alt fa-lg text-danger" (click)="eliminarEstudiante(item.id)"></li>
             </td>
           </tr>

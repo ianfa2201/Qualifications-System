@@ -38,7 +38,10 @@ const routes: Routes = [
   { path: 'materias', component: MateriasComponent},
   { path: 'nuevo-docente', component: NewDocenteComponent},
   { path: 'nuevo-estudiante', component: NewEstudianteComponent},
-  { path: 'nueva-materia', component: NewMateriaComponent}
+  { path: 'nueva-materia', component: NewMateriaComponent},
+  { path: 'edita-docente/:id', component: NewDocenteComponent},
+  { path: 'edita-estudiante/:id', component: NewEstudianteComponent},
+  { path: 'edita-materia/:id', component: NewMateriaComponent}
 
 ];
 

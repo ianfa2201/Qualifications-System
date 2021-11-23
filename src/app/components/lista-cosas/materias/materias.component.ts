@@ -12,37 +12,38 @@ import { MateriasService } from 'src/app/services/materias.service';
 export class MateriasComponent implements OnInit {
 
   listaMaterias: Observable<any[]>;
-  docentes: any[] = [];
+  materias: any[] = [];
 
   constructor(firestore: AngularFirestore, private materiasService: MateriasService, private toastr: ToastrService) {
     this.listaMaterias = firestore.collection('Materia').valueChanges();
    }
 
   ngOnInit(): void {
+    this.getMaterias();
   }
 
-  getCosas() {
+  getMaterias() {
 
     this.materiasService.getMaterias().subscribe(
       data => {
-        this.docentes = [];
+        this.materias = [];
         data.forEach((element: any) => {
           // console.log(element.payload.doc.id);
           // console.log(element.payload.doc.data());
-          this.docentes.push({
+          this.materias.push({
             id: element.payload.doc.id,
             ...element.payload.doc.data()
           })
         });
-        console.log(this.docentes);
+        console.log(this.materias);
       }
     );
   }
 
   eliminarMateria(id: string) {
     this.materiasService.eliminarMateria(id).then(() => {
-      console.log('cosa eliminada con éxito');
-      this.toastr.error('registro eliminado', 'cosa eliminada', {
+      console.log('Materia eliminada con éxito');
+      this.toastr.error('registro eliminado', 'Materia eliminada', {
         positionClass: 'toast-bottom-right'
       });
     }).catch(error => {

@@ -21,7 +21,7 @@
       <span class="h3">
         Docentes
       </span>
-      <button class="btn btn-dark" routerLink="/nueva-cosa">Nuevo</button>
+      <button class="btn btn-dark" routerLink="/nuevo-docente">Nuevo</button>
       <table class="table mt-5 table-striped">
         <thead>
           <tr>
@@ -35,7 +35,7 @@
             <td>{{item.codigo}}</td>
             <td>{{item.nombre}}</td>
             <td>
-              <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;"></li>
+              <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;" [routerLink]="['/edita-docente/',item.id]"></li>
            <li class="fas fa-trash-alt fa-lg text-danger" (click)="eliminarDocente(item.id)"></li>
             </td>
           </tr>

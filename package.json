@@ -22,7 +22,7 @@
     "@firebase/auth": "^0.18.2",
     "@tinymce/tinymce-angular": "^4.2.4",
     "firebase": "^9.1.2",
-    "ngx-toastr": "^14.1.4",
+    "ngx-toastr": "^14.2.1",
     "rxfire": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
