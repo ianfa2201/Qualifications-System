@@ -1,3 +1,4 @@
+import { DocenteService } from './../../services/docente.service';
 import { MateriasService } from 'src/app/services/materias.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -15,8 +16,9 @@ export class NewMateriaComponent implements OnInit {
   enviado = false;
   id: string | null;
   titulo: string = 'Nueva Materia';
+  docentes: any[] = [];
 
-  constructor(private fb: FormBuilder, private MateriaService: MateriasService, private router: Router, private toastr: ToastrService, private aRoute: ActivatedRoute) {
+  constructor(private fb: FormBuilder, private MateriaService: MateriasService, private router: Router, private toastr: ToastrService, private aRoute: ActivatedRoute , private docenteService: DocenteService) {
     this.createMateria = this.fb.group({
       nombre: ['', Validators.required],
       codigo: ['', Validators.required],
@@ -28,6 +30,7 @@ export class NewMateriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.esEditar();
+    this.getDocentes();
   }
 
   agregarMateria() {
@@ -83,6 +86,24 @@ export class NewMateriaComponent implements OnInit {
     } else {
 
     }
+  }
+
+  getDocentes() {
+
+    this.docenteService.getDocentes().subscribe(
+      data => {
+        this.docentes= [];
+        data.forEach((element: any) => {
+          // console.log(element.payload.doc.id);
+          // console.log(element.payload.doc.data());
+          this.docentes.push({
+            id: element.payload.doc.id,
+            ...element.payload.doc.data()
+          })
+        });
+        console.log(this.docentes);
+      }
+    );
   }
 
 }

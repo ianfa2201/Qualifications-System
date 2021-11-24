@@ -32,6 +32,8 @@ import { NewEstudianteComponent } from './add/new-estudiante/new-estudiante.comp
 import { NewMateriaComponent } from './add/new-materia/new-materia.component';
 import { MateriaComponent } from './components/materia/materia.component';
 import { MateriasComponent } from './components/lista-cosas/materias/materias.component';
+import { MateriasDictadasComponent } from './components/materias-dictadas/materias-dictadas.component';
+import { AddCalificacionesComponent } from './components/add-calificaciones/add-calificaciones.component';
 
 
 
@@ -61,7 +63,9 @@ import { MateriasComponent } from './components/lista-cosas/materias/materias.co
     NewDocenteComponent,
     NewEstudianteComponent,
     NewMateriaComponent,
-    MateriaComponent
+    MateriaComponent,
+    MateriasDictadasComponent,
+    AddCalificacionesComponent
   ],
   imports: [
     BrowserModule,

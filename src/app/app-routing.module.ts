@@ -1,3 +1,5 @@
+import { AddCalificacionesComponent } from './components/add-calificaciones/add-calificaciones.component';
+import { MateriasDictadasComponent } from './components/materias-dictadas/materias-dictadas.component';
 import { NewMateriaComponent } from './add/new-materia/new-materia.component';
 import { NewEstudianteComponent } from './add/new-estudiante/new-estudiante.component';
 import { NewDocenteComponent } from './add/new-docente/new-docente.component';
@@ -41,7 +43,10 @@ const routes: Routes = [
   { path: 'nueva-materia', component: NewMateriaComponent},
   { path: 'edita-docente/:id', component: NewDocenteComponent},
   { path: 'edita-estudiante/:id', component: NewEstudianteComponent},
-  { path: 'edita-materia/:id', component: NewMateriaComponent}
+  { path: 'edita-materia/:id', component: NewMateriaComponent},
+  { path: 'dictadas', component: MateriasDictadasComponent},
+  { path: 'add-calificaciones', component: AddCalificacionesComponent}
+
 
 ];
 

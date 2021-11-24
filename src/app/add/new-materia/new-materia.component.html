@@ -14,7 +14,10 @@
                 <input class="form-control" type="number" formControlName="codigo" placeholder="Codigo">
               </div>
               <div class="col">
-                <input class="form-control" type="text" formControlName="profesor" placeholder="Profesor">
+                <select class="form-select" aria-label="Default select example" formControlName="profesor">
+                  <option selected>Seleccione un docente</option>
+                  <option value="{{item.id}}" *ngFor="let item of docentes">{{item.nombre}}</option>
+                </select>
               </div>
             </div>
             <div class="mt-3">

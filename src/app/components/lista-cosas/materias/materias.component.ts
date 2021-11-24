@@ -16,11 +16,13 @@ export class MateriasComponent implements OnInit {
 
   constructor(firestore: AngularFirestore, private materiasService: MateriasService, private toastr: ToastrService) {
     this.listaMaterias = firestore.collection('Materia').valueChanges();
-   }
+  }
 
   ngOnInit(): void {
     this.getMaterias();
   }
+
+
 
   getMaterias() {
 
@@ -29,9 +31,17 @@ export class MateriasComponent implements OnInit {
         this.materias = [];
         data.forEach((element: any) => {
           // console.log(element.payload.doc.id);
-          // console.log(element.payload.doc.data());
+          console.log(element.payload.doc.data()['profesor']);
+          let nombre = "";
           this.materias.push({
             id: element.payload.doc.id,
+            /*profesor: this.materiasService.getDocente(element.payload.doc.data()['profesor']).subscribe(
+              (datos: any) => {
+                nombre = datos.payload.data()['nombre'];
+                return nombre;
+              }
+            ),
+            profe: nombre*/
             ...element.payload.doc.data()
           })
         });
@@ -39,6 +49,13 @@ export class MateriasComponent implements OnInit {
       }
     );
   }
+
+  /*async getNombreProfesor(id: string): Promise<string> {
+
+    const documento = this.materiasService.getDocente(id);
+    const docFinal = await documento.get();
+    return docFinal.data()
+  }*/
 
   eliminarMateria(id: string) {
     this.materiasService.eliminarMateria(id).then(() => {
