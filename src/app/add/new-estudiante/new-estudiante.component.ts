@@ -59,7 +59,7 @@ export class NewEstudianteComponent implements OnInit {
         codigo: this.createEstudiante.value.codigo,
       }
       this.estudianteService.editarEstudiante(this.id, Estudiante).then(() =>
-        this.toastr.info('cosa modificada con exito.', 'cosa modificada', {
+        this.toastr.info('Estudiante modificado con exito.', 'Estudiante modificada', {
           positionClass: 'toast-bottom-right'
         })
       );
@@ -82,3 +82,4 @@ export class NewEstudianteComponent implements OnInit {
   }
 
 }
+

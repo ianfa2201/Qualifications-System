@@ -14,7 +14,7 @@ export class NewMateriaComponent implements OnInit {
   createMateria: FormGroup;
   enviado = false;
   id: string | null;
-  titulo: string = 'Nuevo Materia';
+  titulo: string = 'Nueva Materia';
 
   constructor(private fb: FormBuilder, private MateriaService: MateriasService, private router: Router, private toastr: ToastrService, private aRoute: ActivatedRoute) {
     this.createMateria = this.fb.group({

@@ -17,7 +17,7 @@ export class AuthService {
       this.afAuth.signInWithEmailAndPassword(email, password)
       .then(value => {
         console.log('Nice, it worked!');
-        this.router.navigateByUrl('/lista-cosas');
+        this.router.navigateByUrl('/home');
       })
       .catch(err => {
         console.log('Something went wrong: ', err.message);
@@ -28,7 +28,7 @@ export class AuthService {
       this.afAuth.createUserWithEmailAndPassword(email, password)
       .then(value => {
        console.log('Sucess', value);
-       this.router.navigateByUrl('/lista-cosas');
+       this.router.navigateByUrl('/home');
       })
       .catch(error => {
         console.log('Something went wrong: ', error);
@@ -40,7 +40,7 @@ export class AuthService {
       return this.oAuthLogin(provider)
         .then((value: any) => {
        console.log('Sucess', value),
-       this.router.navigateByUrl('/lista-cosas');
+       this.router.navigateByUrl('/home');
      })
       .catch((error: any) => {
         console.log('Something went wrong: ', error);
@@ -49,7 +49,7 @@ export class AuthService {
 
     logout() {
       this.afAuth.signOut().then(() => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       });
     }
 
