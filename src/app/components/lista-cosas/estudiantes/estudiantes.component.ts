@@ -43,7 +43,7 @@ export class EstudiantesComponent implements OnInit {
   eliminarEstudiante(id: string) {
     this.estudianteService.eliminarEstudiante(id).then(() => {
       console.log('Estudiante eliminado con éxito');
-      this.toastr.error('registro eliminado', 'Estudiante eliminada', {
+      this.toastr.error('registro eliminado', 'Estudiante eliminado', {
         positionClass: 'toast-bottom-right'
       });
     }).catch(error => {
