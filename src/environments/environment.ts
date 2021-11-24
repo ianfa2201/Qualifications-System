@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyCe9uxwHS1amMDL8Qsluw69fePdCFsdSKU",
-    authDomain: "proyecto1-43feb.firebaseapp.com",
-    projectId: "proyecto1-43feb",
-    storageBucket: "proyecto1-43feb.appspot.com",
-    messagingSenderId: "978620803644",
-    appId: "1:978620803644:web:3790230d817eeec6d3b139"
+    apiKey: "AIzaSyBSjqQJSRHGyDAc1D1yAW3V0Q5WhhCAC2E",
+    authDomain: "holamundo-c5321.firebaseapp.com",
+    projectId: "holamundo-c5321",
+    storageBucket: "holamundo-c5321.appspot.com",
+    messagingSenderId: "4961436979",
+    appId: "1:4961436979:web:d4a937a126e8e6f7ecaa46"
   }
 };
 

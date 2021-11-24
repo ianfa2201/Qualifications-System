@@ -33,17 +33,12 @@ import { NewMateriaComponent } from './add/new-materia/new-materia.component';
 import { MateriaComponent } from './components/materia/materia.component';
 import { MateriasComponent } from './components/lista-cosas/materias/materias.component';
 
+
+
 //import { AngularFirestore } from '@angular/fire/firestore';
 //import { AngularFireAuthModule } from "@angular/fire/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBSjqQJSRHGyDAc1D1yAW3V0Q5WhhCAC2E",
-  authDomain: "holamundo-c5321.firebaseapp.com",
-  projectId: "holamundo-c5321",
-  storageBucket: "holamundo-c5321.appspot.com",
-  messagingSenderId: "4961436979",
-  appId: "1:4961436979:web:d4a937a126e8e6f7ecaa46"
-};
+
 
 @NgModule({
   declarations: [
@@ -73,7 +68,7 @@ const firebaseConfig = {
     AppRoutingModule,
     FormsModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     ReactiveFormsModule,
     EditorModule,
     ToastrModule.forRoot(),
